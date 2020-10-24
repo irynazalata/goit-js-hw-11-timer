@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  height: 180px;
+}
+
+.field {
+  border: solid 2px #464644;
+  background-color: #034621;
+  padding: 0 50px 20px;
+  color: rgb(246, 250, 250);
+}
+.field:not(:last-child) {
+  margin-right: 1px;
+}
+.field span {
+  display: block;
+  text-align: center;
+}
+
+.value {
+  font-size: 120px;
+  font-weight: 900;
+}
+
+.label {
+  font-size: 20px;
+}

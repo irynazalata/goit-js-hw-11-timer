@@ -8,20 +8,35 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background-image: url(./images/newYear.jpg);
+  background-size: cover;
+  background-position-y: -120px;
+}
+
+.title {
+  font-family: cursive;
+  font-size: 40px;
+  color: rgba(49, 5, 85, 0.932);
+  text-shadow: 5px 5px 10px white;
+  text-align: center;
+  text-transform: uppercase;
+}
 .timer {
   display: flex;
   justify-content: center;
-  height: 180px;
+  height: 140px;
 }
 
 .field {
-  border: solid 2px #464644;
-  background-color: #034621;
-  padding: 0 50px 20px;
+  border: solid 1px #3b2c47b9;
+  background-color: rgba(55, 46, 182, 0.644);
+  padding: 0 40px 20px;
   color: rgb(246, 250, 250);
+  border-radius: 10px;
 }
 .field:not(:last-child) {
-  margin-right: 1px;
+  margin-right: 5px;
 }
 .field span {
   display: block;
@@ -29,7 +44,7 @@ html {
 }
 
 .value {
-  font-size: 120px;
+  font-size: 90px;
   font-weight: 900;
 }
 

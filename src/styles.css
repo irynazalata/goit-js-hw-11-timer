@@ -17,10 +17,11 @@ body {
 .title {
   font-family: cursive;
   font-size: 40px;
-  color: rgba(49, 5, 85, 0.932);
-  text-shadow: 5px 5px 10px white;
+  color: rgba(1, 9, 54, 0.89);
+  text-shadow: white 2px 2px 5px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .timer {
   display: flex;
@@ -29,8 +30,7 @@ body {
 }
 
 .field {
-  border: solid 1px #3b2c47b9;
-  background-color: rgba(55, 46, 182, 0.644);
+  background-color: rgba(1, 9, 54, 0.89);
   padding: 0 40px 20px;
   color: rgb(246, 250, 250);
   border-radius: 10px;

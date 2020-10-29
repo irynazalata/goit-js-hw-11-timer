@@ -16,10 +16,10 @@ class CountdownTimer {
       const mins = String(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
       const secs = String(Math.floor((time % (1000 * 60)) / 1000)).padStart(2, '0');
   
-      document.querySelector('[data-value="days"]').innerHTML = `${days}`;
-      document.querySelector('[data-value="hours"]').innerHTML = `${hours}`;
-      document.querySelector('[data-value="mins"]').innerHTML = `${mins}`;
-      document.querySelector('[data-value="secs"]').innerHTML = `${secs}`;
+      document.querySelector('[data-value="days"]').textContent = `${days}`;
+      document.querySelector('[data-value="hours"]').textContent = `${hours}`;
+      document.querySelector('[data-value="mins"]').textContent = `${mins}`;
+      document.querySelector('[data-value="secs"]').textContent = `${secs}`;
     }
     setInterval(date, 1000)
   }

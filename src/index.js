@@ -8,6 +8,7 @@ class CountdownTimer {
   }
   setTimer() {
     let targetDate = this.targetDate;
+    let selector = this.selector;
     const date = function () {
       let currentDay = Date.now();
       let time = targetDate.getTime() - currentDay;
@@ -15,12 +16,14 @@ class CountdownTimer {
       const hours = String(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
       const mins = String(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
       const secs = String(Math.floor((time % (1000 * 60)) / 1000)).padStart(2, '0');
-  
-      document.querySelector('[data-value="days"]').textContent = `${days}`;
-      document.querySelector('[data-value="hours"]').textContent = `${hours}`;
-      document.querySelector('[data-value="mins"]').textContent = `${mins}`;
-      document.querySelector('[data-value="secs"]').textContent = `${secs}`;
+      
+      const wrapper = document.querySelector(`${selector}`)
+      wrapper.querySelector('[data-value="days"]').textContent = `${days}`;
+      wrapper.querySelector('[data-value="hours"]').textContent = `${hours}`;
+      wrapper.querySelector('[data-value="mins"]').textContent = `${mins}`;
+      wrapper.querySelector('[data-value="secs"]').textContent = `${secs}`;
     }
+
     setInterval(date, 1000)
   }
 }
@@ -30,4 +33,5 @@ const timer = new CountdownTimer({
   targetDate: new Date('Jan 1, 2021'),
 });;
 
- timer.setTimer()
+
+timer.setTimer()
